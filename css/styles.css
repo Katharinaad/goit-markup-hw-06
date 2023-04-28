@@ -15,6 +15,7 @@
   /* modal window */
   --modal-background: #fcfcfc;
   --modal-btn: #e7e9fc;
+  --modal-idx: 100;
 }
 
 /* reset start */
@@ -268,6 +269,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: var(--modal-idx);
 
   background-color: rgba(46, 47, 66, 0.4);
 
@@ -310,7 +312,7 @@ body {
   opacity: 0;
 }
 
-.modal-btn {
+.modal-close-btn {
   margin-left: auto;
 
   display: flex;
@@ -328,8 +330,8 @@ body {
   transition: color var(--animation), background-color var(--animation);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: var(--button-color);
   color: var(--primary-white-color);
 }
@@ -632,7 +634,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  width: 264px;
 }
 
 .socials-text-footer {
@@ -642,6 +644,91 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-white-color);
   margin-bottom: 16px;
+}
+
+/* Subscribe field */
+
+.subscribe-section {
+  display: block;
+}
+
+.subscribe-form-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-white-color);
+  margin-bottom: 16px;
+}
+
+.footer-form-input {
+  display: block;
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+  color: var(--secondary-text-color);
+
+  background-color: transparent;
+  font-family: inherit;
+
+  border: 1px solid #ffffff;
+  filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  outline: none;
+}
+
+::placeholder {
+  color: var(--primary-white-color);
+}
+
+.footer-form-input:placeholder-shown {
+  border-color: var(--primary-white-color);
+}
+
+.footer-form-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+}
+
+.subscribe-btn {
+  position: relative;
+  border: none;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 64px 8px 24px;
+
+  cursor: pointer;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  color: var(--primary-white-color);
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--animation);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--button-color);
+}
+
+.subscribe-icon {
+  position: absolute;
+  right: 16%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: currentColor;
 }
 
 /* Portfolio */
