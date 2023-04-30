@@ -477,8 +477,6 @@ body {
   color: var(--accent-color);
 }
 
-.modal-form-agreement-link {
-}
 .modal-btn {
   display: block;
   margin: 0 auto;
@@ -490,8 +488,16 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 
   color: var(--primary-white-color);
+
+  transition: background-color var(--animation);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--button-color);
 }
 
 /* Section */
