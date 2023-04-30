@@ -757,12 +757,15 @@ body {
 
 .footer-container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
 }
 
 .section-footer {
   background-color: var(--title-text-color);
+}
+
+.footer-logo {
+  margin-right: 120px;
 }
 
 .logo-web-footer {
@@ -804,6 +807,10 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-white-color);
   margin-bottom: 16px;
+}
+
+.social-media {
+  margin-right: 80px;
 }
 
 /* Subscribe field */
@@ -859,15 +866,18 @@ body {
 }
 
 .subscribe-btn {
-  position: relative;
+  display: flex;
+  gap: 16px;
+  width: 165px;
+
   border: none;
   text-align: center;
+  justify-content: center;
+  padding: 8px;
 
   font-family: inherit;
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  padding: 8px 64px 8px 24px;
 
   cursor: pointer;
   background-color: var(--accent-color);
@@ -885,12 +895,6 @@ body {
 }
 
 .subscribe-icon {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
   color: currentColor;
 }
 
